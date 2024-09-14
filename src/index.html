@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css"
+/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />   
+     <link rel="stylesheet" href="../dest/output.css" />
+     <link rel="icon" href="../src/img/logo.png" type="image/x-icon">
+
+        <title>Yummy</title>
+</head>
+<body class="bg-black">
+
+ <div class="section h-screen flex bg-black ">
+    <div class="navbar w-1/5 h-screen bg-black flex justify-between fixed -left-[0px] z-50"> 
+      
+    <div class="innerbar flex flex-col justify-between">
+        <div class="tabs text-white flex flex-col">
+            <a id="sear" href="#search" class="navu mt-8 text-lg ms-5">Search</a>
+            <a id="cat" href="#categories" class="navu mt-8 text-lg ms-5">Categories</a>
+            <a id="areaa" href="#area" class="navu mt-8 text-lg ms-5">Area</a>
+            <a id="in" href="#ingredient" class="navu mt-8 text-lg ms-5">Ingredients</a>
+            <a id="con" href="#contact" class="navu mt-8 text-lg ms-5">Contact Us</a>
+      
+        </div>
+        <div class="copyright mb-14 ms-6">
+            <div><i class="fa-brands fa-facebook" style="color: #ffffff;"></i>
+                <i class="fa-brands fa-twitter" style="color: #ffffff;"></i>
+                <i class="fa-solid fa-globe" style="color: #ffffff;"></i>
+            </div>
+            <div class="text-xl text-white">Copyright Â© 2019 All Rights
+                Reserved.</div>
+        </div>
+    </div>
+    <div class="outerbar bg-white  w-[80px] flex flex-col justify-around items-center h-screen">
+
+        <div class="logo">
+            <img class="w-full" src="./img/logo.png" alt="logo">
+        </div>
+        <div class="barr" id="bar">
+            <i id="x" class="fa-solid fa-bars text-[40px]" style="color: #000000;"></i>
+        </div>
+        <div class="connect flex flex-col">
+            <i class="fa-solid fa-globe mb-4  text-[20px]"></i>
+            <i class="fa-solid fa-link mb-4  text-[20px]"></i>
+        </div>
+
+    </div>
+</div>
+<div id="categories" class="categories w-full flex flex-wrap justify-center items-center gap-10 bg-black mt-9 ">
+  <span class="loader"></span>
+  <!-- Category items will be appended here by the JavaScript function -->
+</div> 
+<div id="ingredient" class="ingredient  flex flex-wrap justify-center gap-6 bg-black hidden">
+  <!-- Category items will be appended here by the JavaScript function -->
+</div> 
+<div id="area" class="area w-full flex flex-wrap justify-center gap-6 hidden ">
+  <!-- Category items will be appended here by the JavaScript function -->
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="contact" class="contact w-full h-screen bg-black flex flex-col justify-center items-center gap-6 hidden"> 
+  <div class="flex w-2/3 justify-center gap-4 w-full">
+      <div class="relative h-10 w-2/5 min-w-[350px] bg-white">
+          <input id="name"
+              class="peer placeholder:text-black h-full w-full rounded-[7px] border border-blue-gray-200 bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-teal-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+              placeholder="Enter your name "
+          />
+          <small class="text-red-500 hidden" id="nameError">Name is invalid.</small>
+      </div>
+      <div class="relative h-10 w-2/5 min-w-[200px] bg-white">
+          <input id="email"
+              class="peer placeholder:text-black h-full w-full rounded-[7px] border border-blue-gray-200 bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-teal-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+              placeholder="Enter your email"
+          />
+          <small class="text-red-500 hidden" id="emailError">Valid email is required.</small>
+      </div>
+  </div>
+  <div class="flex w-2/3 justify-center gap-4 w-full">
+      <div class="relative h-10 w-2/5 min-w-[350px] bg-white">
+          <input id="phone"
+              class="peer placeholder:text-black h-full w-full rounded-[7px] border border-blue-gray-200 bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-teal-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+              placeholder="Enter your phone "
+          />
+          <small class="text-red-500 hidden" id="phoneError">Valid phone number is required.</small>
+      </div>
+      <div class="relative h-10 w-2/5 min-w-[200px] bg-white">
+          <input id="age"
+              class="peer placeholder:text-black h-full w-full rounded-[7px] border border-blue-gray-200 bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-teal-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+              placeholder="Enter your age"
+          />
+          <small class="text-red-500 hidden" id="ageError">Valid age is required.</small>
+      </div>
+  </div>
+  <div class="flex w-2/3 justify-center gap-4 w-full">
+      <div class="relative h-10 w-2/5 min-w-[350px] bg-white">
+          <input id="password"
+              class="peer placeholder:text-black h-full w-full rounded-[7px] border border-blue-gray-200 bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-teal-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+              placeholder="Enter your password "
+              type="password"
+          />
+          <small class="text-red-500 hidden" id="passwordError">Password is invalid.</small>
+      </div>
+      <div class="relative h-10 w-2/5 min-w-[200px] bg-white">
+          <input id="repassword"
+              class="peer placeholder:text-black h-full w-full rounded-[7px] border border-blue-gray-200 bg-transparent px-3 py-2.5 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-teal-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+              placeholder="Repassword"
+              type="password"
+          />
+          <small class="text-red-500 hidden" id="repasswordError">Passwords do not match.</small>
+      </div>
+  </div>
+  <button id="submitBtn" class="w-[65px] h-[40px] rounded-md text-red-700 border border-red-700">Submit</button>
+</div>
+
+
+     <div id="ingredient" class="ingredient w-full h-screen bg-black flex justify-center  hidden gap-6 text-white">
+        <div class="unit w-1/5 h-[200px] flex flex-col mt-4 ms-4 justify-center items-center bg-slate-500">
+            <i class="fa-solid fa-drumstick-bite fa-4x"></i>
+            <p class="font-bold text-2xl">dfxdgcx</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, mollitia sequi quaerat voluptate ad asperiores ullam expedita voluptatum porro obcaecati!</p>
+        </div>
+     </div>
+     <div id="area" class="areaa w-full  bg-black flex flex-wrap justify-center gap-6 text-white hidden">
+        <div class="size-36 flex flex-col justify-center items-center w-1/4">
+            <i class="fa-solid fa-house-laptop fa-4x"></i>
+            <h1 class="font-bold text-2xl">AMERICAN</h1>
+        </div>
+     </div>
+<div id="categories" class="categories  w-full h-screen  flex justify-center gap-6 bg-black hidden">
+    <div class="group w-1/5 h-[150px] overflow-hidden">
+        <img class="w-full h-full" src="./img/logo.png" alt="ss">
+        <div class="bg-opacity-60 bg-slate-200 text-center h-full w-full relative group-hover:translate-y-[-140px] duration-1000">
+            <p class="font-bold text-2xl">beef</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis eum dignissimos earum natuyyys? Officia, dolorum.</p>
+        </div>
+    </div>
+</div>
+<div id="search" class="search  w-full  flex flex-col justify-start gap-6 bg-black hidden">
+  <div class="flex justify-center items-start"> <div class="relative h-10 w-2/5 min-w-[350px] bg-black mt-12">
+    <input id="nameo"
+      class="text-white text-lg placeholder:text-slate-400 h-full w-full rounded-[7px] border border-blue-gray-200 bg-transparent px-3 py-2.5 font-sans font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-teal-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+      placeholder="search by name "
+    />
+   
+  </div>
+  <div class="relative h-10 w-2/5 min-w-[350px] bg-black mt-12">
+    <input id="fletter" maxlength="1"
+      class="text-white text-lg placeholder:text-slate-400 h-full w-full rounded-[7px] border border-blue-gray-200 bg-transparent px-3 py-2.5 font-sans font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-teal-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+      placeholder="search by first letter "
+    />
+   
+  </div></div>
+   
+      <div id="namee" class="text-white flex flex-wrap gap-6 justify-center items-center"></div>
+</div>
+<div id="instructions" class="instructions w-full h-full bg-red-400 text-white flex justify-center items-start hidden">
+    <div class="left flex flex-col justify-start items-center w-1/4">
+        <img class="w-full" src="./img/logo.png" alt="s">
+        <p class="text-2xl font-bold">BEEF AND MSUSDAD</p>
+    </div>
+    <div class="right w-3/5 flex flex-col">
+        <h1 class="text-4xl font-bold mb-4">instructions</h1>
+        <p>Preheat the oven to 150C/300F/Gas 2.ddddddddd Toss the beef and flour together in a bowl with some salt and black pepper. Heat a large casserole until hot, add half of the rapeseed oil and enough of the beef to just cover the bottom of the casserole. Fry until browned on each side, then remove and set aside. Repeat with the remaining oil and beef. Return the beef to the pan, add the wine and cook until the volume of liquid has reduced by half, then add the stock, onion, carrots, thyme and mustard, and season well with salt and pepper. Cover with a lid and place in the oven for two hours. Remove from the oven, check the seasoning and set aside to cool. Remove the thyme. When the beef is cool and you're ready to assemble the pie, preheat the oven to 200C/400F/Gas 6. Transfer the beef to a pie dish, brush the rim with the beaten egg yolks and lay the pastry over the top. Brush the top of the pastry with more beaten egg. Trim the pastry so there is just enough excess to crimp the edges, then place in the oven and bake for 30 minutes, or until the pastry is golden-brown and cooked through. For the green beans, bring a saucepan of salted water to the boil, add the beans and cook for 4-5 minutes, or until just tender. Drain and toss with the butter, then season with black pepper. To serve, place a large spoonful of pie onto each plate with some green beans alongside.</p>
+        <p class="text-4xl font-bold mt-4">Area: biritish</p>
+        <p class="text-4xl font-bold mt-4">Category:beef</p>
+        <p class="text-4xl font-bold mt-4">recipes:</p>
+        <div class="w-full flex gap-5">
+            <div class="bg-sky-300 w-[60px] h-[30px] rounded-lg flex justify-center items-center mt-4">meet</div>
+            <div class="bg-sky-300 w-[60px] h-[30px] rounded-lg flex justify-center items-center mt-4">meet</div>
+            <div class="bg-sky-300 w-[60px] h-[30px] rounded-lg flex justify-center items-center mt-4">meet</div>
+            <div class="bg-sky-300 w-[60px] h-[30px] rounded-lg flex justify-center items-center mt-4">meet</div>
+        </div>
+        <p class="text-4xl font-bold mt-4">tags:</p>
+        <div class="w-full gap-4 flex">
+            <div class="bg-red-300 w-[60px] h-[30px] rounded-lg flex justify-center items-center mt-4">meet</div>
+            <div class="bg-red-300 w-[60px] h-[30px] rounded-lg flex justify-center items-center mt-4">meet</div>
+            <div class="bg-red-300 w-[60px] h-[30px] rounded-lg flex justify-center items-center mt-4">meet</div>
+            <div class="bg-red-300 w-[60px] h-[30px] rounded-lg flex justify-center items-center mt-4">meet</div>
+            
+        </div>
+
+    </div>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="./js/js.js" type="module"></script>
+</body>
+</html>
